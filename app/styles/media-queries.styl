@@ -1,0 +1,33 @@
+/* Stylus rupture.
+ * Media-queries configuration.
+ * https://github.com/jenius/rupture/blob/master/readme.md
+   ========================================================================== */
+
+
+
+
+rupture.enable-em-breakpoints = false;
+rupture.retina-density = 1.5;
+
+  rupture.scale =        0        320px       460px      600px        800px      1280px
+  //
+  //                     └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘ └────┬────
+  //Slice numbers:            1           2           3           4           5           6
+  rupture.scale-names=  "xxs"      "xs"        "s"         "m"         "l"         "xl"
+
+
+
+
+
++below('xl')
+  max-width auto
++below('l')
+  max-width auto
++below('m')
+  max-width auto
++below('s')
+  max-width auto
++below('xs')
+  max-width auto
++below('xxs')
+  max-width auto

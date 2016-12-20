@@ -1,0 +1,11 @@
+.DS_Store
+npm-debug.log
+node_modules/
+static/build
+static/cache
+static/vendor
+*.pyc
+composer.lock
+composer.phar
+composer-setup.php
+/vendor/

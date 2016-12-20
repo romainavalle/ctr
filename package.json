@@ -1,0 +1,122 @@
+{
+  "private": true,
+  "name": "ctr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/romaindr/ctr"
+  },
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run server",
+    "dev": "gulp build --watch",
+    "server": "gulp server --watch",
+    "prod": "gulp build --production"
+  },
+  "dependencies": {
+    "autoprefixer-core": "^6.0.1",
+    "babel-core": "^6.9.0",
+    "babel-plugin-glslify": "^2.0.0",
+    "babel-runtime": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "browsernizr": "^2.1.0",
+    "connect-history-api-fallback": "^1.2.0",
+    "css-mqpacker": "^5.0.1",
+    "glsl-noise": "0.0.0",
+    "glslify": "^6.0.1",
+    "gsap": "*",
+    "gulp-babel": "^6.1.2",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-filter": "^4.0.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-svgstore": "^6.0.0",
+    "moment": "^2.13.0",
+    "mversion": "^1.10.1",
+    "nk-css-reset": "*",
+    "nk-css-utils": "*",
+    "nk-query-string": "*",
+    "page": "*",
+    "pngcrush": "^1.0.0",
+    "pngquant": "^1.0.0",
+    "resource-loader": "^1.0.0",
+    "rupture": "*",
+    "stringify": "^5.1.0",
+    "stylus-easing": "*",
+    "three": "^0.82.1",
+    "tiny-emitter": "*"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "*",
+    "babel-core": "*",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-plugin-transform-class-properties": "^6.11.5",
+    "babel-plugin-transform-es2015-classes": "^6.14.0",
+    "babel-runtime": "*",
+    "babelify": "6.0.2",
+    "brfs": "*",
+    "browser-sync": "*",
+    "browserify": "*",
+    "browserify-shim": "*",
+    "classie": "^1.0.0",
+    "connect-history-api-fallback": "*",
+    "css-mqpacker": "*",
+    "defaults": "*",
+    "envify": "*",
+    "gulp": "*",
+    "gulp-babel": "*",
+    "gulp-filter": "*",
+    "gulp-imagemin": "*",
+    "gulp-minify-css": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-postcss": "*",
+    "gulp-rename": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-stylus": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "minimist": "*",
+    "mversion": "*",
+    "pretty-hrtime": "*",
+    "request-animation-frame-shim": "*",
+    "rimraf": "*",
+    "stringify": "*",
+    "vinyl-source-stream": "*",
+    "watchify": "3.1.1"
+  },
+  "browser": {
+    "tweenmax": "./node_modules/gsap/src/uncompressed/TweenMax.js",
+    "requestAnimationFrame": "./app/scripts/vendors/requestAnimationFrame.js",
+    "Stats": "./app/scripts/vendors/stats.min.js",
+    "signals": "./app/scripts/vendors/signals.min.js"
+  },
+  "browserify": {
+    "transform":[
+    [
+      "babelify",
+      {
+        "only": "app",
+        "presets": [
+          "es2015"
+        ],
+        "plugins": [
+          "transform-class-properties",
+          [
+            "transform-es2015-classes",
+            {
+              "loose": true
+            }
+          ]
+        ]
+      }
+    ],
+    ["glslify"]
+  ]
+  },
+  "author": "Romain Avalle",
+  "license": "ISC"
+}
